@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/reevald/ai-workout-assistant.git"
+    "url": "#"
   },
-  "author": "Moch. Galang Rivaldo",
-  "license": "ISC",
+  "author": "novastack",
+  "license": "#",
   "bugs": {
-    "url": "https://github.com/reevald/ai-workout-assistant/issues"
+    "url": "#"
   },
-  "homepage": "https://github.com/reevald/ai-workout-assistant#readme",
+  "homepage": "#",
   "devDependencies": {
     "eslint": "^8.32.0",
     "eslint-config-airbnb-base": "^15.0.0",
