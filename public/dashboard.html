@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard • AI Sports Talent Assessment</title>
+  <meta name="description" content="Interactive dashboard for the AI-based platform for sports talent assessment." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    html, body { font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; -webkit-font-smoothing: antialiased; }
+    .gradient-bg { background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%); }
+    .card { transition: transform .2s ease, box-shadow .2s ease; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 15px 35px rgba(0,0,0,0.08); }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+  <!-- Navbar -->
+  <nav class="bg-white border-b sticky top-0 z-30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <svg class="h-7 w-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+        </svg>
+        <span class="font-bold text-gray-800">AI Sports Talent Assessment</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span id="welcomeUser" class="text-gray-600 hidden sm:inline"></span>
+        <button id="logoutDashBtn" class="px-4 py-2 rounded-lg bg-red-500 text-white font-semibold hover:bg-red-600">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="gradient-bg text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Welcome to your Assessment Hub</h1>
+          <p class="mt-4 text-indigo-100 text-lg">Analyze performance, track progress, and start AI-driven talent assessments tailored for sports ability.</p>
+          <div class="mt-6 flex flex-col sm:flex-row gap-3">
+            <a href="./index.html" id="startAssessmentBtn" class="px-6 py-3 rounded-lg bg-yellow-400 text-gray-900 font-bold hover:bg-yellow-300 text-center">Start Talent Assessment</a>
+            <a href="./home.html" class="px-6 py-3 rounded-lg border border-white/60 text-white font-semibold hover:bg-white hover:text-gray-900 text-center">Back to Home</a>
+          </div>
+        </div>
+        <div class="hidden md:block">
+          <img src="./img/undraw_choose_re_7d5a.svg" alt="Assessment" class="w-full h-auto" onerror="this.style.display='none'" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Feature Section (connects to core app) -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold text-gray-800 mb-6">Main Feature • AI Talent Assessment</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card bg-white rounded-xl border p-6 flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3-.895 3-2s-1.343-2-3-2-3 .895-3 2 1.343 2 3 2zm0 0v8m-6 4a6 6 0 1112 0"></path></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-800">Pose & Form Analysis</h3>
+          </div>
+          <p class="text-gray-600 mb-4">Use your camera and our AI models to measure technique and consistency during drills.</p>
+          <a href="./index.html" class="mt-auto inline-flex items-center gap-2 text-indigo-600 font-semibold hover:underline">Go to Assessment <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="card bg-white rounded-xl border p-6 flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
+              <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7 20h10a2 2 0 002-2V8"></path></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-800">Progress & Scores</h3>
+          </div>
+          <p class="text-gray-600 mb-4">Review historical reps and best sessions. Track your development over time.</p>
+          <a href="./index.html" class="mt-auto inline-flex items-center gap-2 text-indigo-600 font-semibold hover:underline">View in App <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="card bg-white rounded-xl border p-6 flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center">
+              <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v8m-4-4h8"></path></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-800">Quick Start</h3>
+          </div>
+          <p class="text-gray-600 mb-4">Jump straight into a session. The app will guide you to choose a drill and duration.</p>
+          <a href="./index.html" class="mt-auto inline-flex items-center gap-2 text-indigo-600 font-semibold hover:underline">Start now <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Extras -->
+  <section class="pb-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-xl border p-6">
+          <h3 class="text-lg font-bold text-gray-800 mb-2">Recent Activity</h3>
+          <p class="text-gray-500">No sessions yet. Start your first assessment!</p>
+        </div>
+        <div class="bg-white rounded-xl border p-6">
+          <h3 class="text-lg font-bold text-gray-800 mb-2">Tips</h3>
+          <ul class="list-disc pl-5 text-gray-600 space-y-1">
+            <li>Use a well-lit environment.</li>
+            <li>Position the full body in front of the camera.</li>
+            <li>Follow on-screen prompts for best results.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const isLoggedIn = sessionStorage.getItem('loggedIn') === 'true';
+      const username = sessionStorage.getItem('username') || 'Athlete';
+      const welcomeUser = document.getElementById('welcomeUser');
+      const logoutDashBtn = document.getElementById('logoutDashBtn');
+
+      if (!isLoggedIn) {
+        // If not logged in, redirect to login page
+        window.location.href = './index.html';
+        return;
+      }
+
+      welcomeUser.textContent = `Hi, ${username}`;
+
+      logoutDashBtn.addEventListener('click', () => {
+        sessionStorage.removeItem('loggedIn');
+        sessionStorage.removeItem('username');
+        window.location.href = './home.html';
+      });
+    });
+  </script>
+</body>
+</html>
+

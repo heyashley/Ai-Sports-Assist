@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Sports ASSESMENT - Your Personal Workout ASSESMENT</title>
+    <meta name="description" content="Transform your fitness journey with AI-powered pose detection and personalized workout guidance.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        html, body { font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; -webkit-font-smoothing: antialiased; }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .feature-card-hover {
+            transition: all 0.3s ease;
+        }
+        .feature-card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .hero-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <svg class="h-8 w-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        <span class="ml-2 text-xl font-bold text-gray-800">AI Sports Assesment</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button id="loginNavBtn" class="bg-indigo-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition duration-200">Login</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <h1 class="text-5xl font-bold leading-tight mb-6">
+                        Your AI-Powered
+                        <span class="text-yellow-300">Fitness Assesment</span>
+                    </h1>
+                    <p class="text-xl text-indigo-100 mb-8">
+                        Transform your workout experience with advanced pose detection, real-time feedback, and personalized training guidance.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button id="getStartedBtn" class="bg-yellow-500 text-gray-800 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition duration-200 shadow-lg">
+                            Get Started Now
+                        </button>
+                        <button id="learnMoreBtn" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-gray-800 transition duration-200">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-animation">
+                    <img src="./img/undraw_workout_gcgu.svg" alt="AI Fitness Coach" class="w-full h-auto" onerror="this.style.display='none'">
+                </div>
+            </div>
+        </div>
+        <!-- Decorative elements -->
+        <div class="absolute top-0 left-0 w-full h-full">
+            <div class="absolute top-10 left-10 w-20 h-20 bg-yellow-300 rounded-full opacity-20"></div>
+            <div class="absolute bottom-20 right-20 w-32 h-32 bg-pink-300 rounded-full opacity-20"></div>
+            <div class="absolute top-1/2 right-10 w-16 h-16 bg-green-300 rounded-full opacity-20"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Powerful Features</h2>
+                <p class="text-xl text-gray-600">Everything you need for an effective workout experience</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card-hover bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                    <div class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Real-time Pose Detection</h3>
+                    <p class="text-gray-600">Advanced AI analyzes your form and provides instant feedback to ensure proper technique and prevent injuries.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card-hover bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Automatic Rep Counting</h3>
+                    <p class="text-gray-600">Never lose count again. Our AI automatically tracks your repetitions and sets for accurate workout logging.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card-hover bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                    <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Multiple Workout Types</h3>
+                    <p class="text-gray-600">Support for various exercises including push-ups, squats, and more. Personalized routines for every fitness level.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card-hover bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Privacy First</h3>
+                    <p class="text-gray-600">All processing happens on your device. Your video data never leaves your computer, ensuring complete privacy.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="feature-card-hover bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                    <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Progress Tracking</h3>
+                    <p class="text-gray-600">Monitor your fitness journey with detailed analytics and progress reports to stay motivated.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="feature-card-hover bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Works Everywhere</h3>
+                    <p class="text-gray-600">No app downloads required. Works directly in your browser on desktop, tablet, or mobile devices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-gray-800 py-20">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-white mb-6">Ready to Transform Your Sporys?</h2>
+            <p class="text-xl text-gray-300 mb-8">Join thousands of users who have already improved their workout form with AI Sports Assistant.</p>
+            <button id="startWorkoutBtn" class="bg-yellow-500 text-gray-800 px-10 py-4 rounded-lg font-bold text-xl hover:bg-yellow-400 transition duration-200 shadow-lg">
+                Start Your First Workout
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <svg class="h-6 w-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        <span class="ml-2 text-lg font-bold">AI Sports Assesment</span>
+                    </div>
+                    <p class="text-gray-400">Empowering your fitness journey with artificial intelligence.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Features</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Pose Detection</li>
+                        <li>Rep Counting</li>
+                        <li>Form Analysis</li>
+                        <li>Progress Tracking</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>How to Use</li>
+                        <li>Privacy Policy</li>
+                        <li>Contact Us</li>
+                        <li>FAQ</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 AI Sports Assesment. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Navigation to login
+            const loginNavBtn = document.getElementById('loginNavBtn');
+            const getStartedBtn = document.getElementById('getStartedBtn');
+            const startWorkoutBtn = document.getElementById('startWorkoutBtn');
+            
+            function goToLogin() {
+                // Redirect to main app (index.html) which will show login
+                window.location.href = './index.html';
+            }
+            
+            loginNavBtn.addEventListener('click', goToLogin);
+            getStartedBtn.addEventListener('click', goToLogin);
+            startWorkoutBtn.addEventListener('click', goToLogin);
+            
+            // Smooth scrolling for learn more
+            const learnMoreBtn = document.getElementById('learnMoreBtn');
+            learnMoreBtn.addEventListener('click', () => {
+                document.querySelector('section:nth-of-type(2)').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
+
